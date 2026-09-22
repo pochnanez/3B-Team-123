@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #CAF4FF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.registration-container {
+    background-color: #CAF4FF;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    color: #5AB2FF;
+    margin: 10px 0 5px 0;
+}
+
+.header p {
+    color: #333333;
+    margin: 0;
+}
+
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .input-group {
+    flex: 1;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group input[type="date"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #A0DEFF;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #5AB2FF;
+    outline: none;
+}
+
+.helper-text {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 5px;
+}
+
+.gender-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: #FFF9D0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.gender-options label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333333;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5AB2FF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #A0DEFF;
+}
+
+.signin {
+    text-align: center;
+    margin-top: 15px;
+    color: #333333;
+}
+
+.signin a {
+    color: #5AB2FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+
+#passwordMessage {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+}
