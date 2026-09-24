@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sun Son Solar</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #EAF8FC;
+            text-align: center;
+        }
+
+        .page {
+            width: 350px;
+            margin: 50px auto;
+            padding: 25px;
+            background: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #B8DDE8;
+        }
+
+        img {
+            width: 100px;
+        }
+
+        h1, h2 {
+            color: #3AAED8;
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input {
+            border: 1px solid #B8DDE8;
+            background: #F8FDFF;
+        }
+
+        button {
+            background: #FFE69A;
+            color: #397C96;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #D5F1FA;
+        }
+
+        a {
+            cursor: pointer;
+            color: #3AAED8;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="page">
+    <img src="logo.png" width="100">
+    <h2>Sun Son Solar</h2>
+
+    <input id="loginUser" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p>No account? <a onclick="show('register')">Register</a></p>
+</div>
+
+<!-- REGISTER -->
+<div id="register" class="page" style="display:none">
+    <img src="logo.png" width="100">
+    <h2>Create Account</h2>
+
+    <input id="name" placeholder="Full Name">
+    <input id="email" type="email" placeholder="Email">
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="register()">Register</button>
+
+    <p>Already have an account?
+        <a onclick="show('login')">Login</a>
+    </p>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page" style="display:none">
+    <img src="logo.png" width="100">
+    <h1>Welcome to Sun Son Solar!</h1>
+    <p>Clean energy. Brighter tomorrows.</p>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+function show(page) {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("register").style.display = "none";
+    document.getElementById("home").style.display = "none";
+    document.getElementById(page).style.display = "block";
+}
+
+function register() {
+    localStorage.user = document.getElementById("username").value;
+    localStorage.pass = document.getElementById("password").value;
+
+    alert("Registration successful!");
+    show("login");
+}
+
+function login() {
+    if (
+        document.getElementById("loginUser").value == localStorage.user &&
+        document.getElementById("loginPass").value == localStorage.pass
+    ) {
+        show("home");
+    } else {
+        alert("Wrong username or password!");
+    }
+}
+
+function logout() {
+    show("login");
+}
+</script>
+
+</body>
+</html>
