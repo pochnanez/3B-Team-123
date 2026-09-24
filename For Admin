@@ -60,8 +60,6 @@
 </head>
 
 <body>
-
-<!-- LOGIN -->
 <div id="login" class="page">
     <img src="logo.png" width="100">
     <h2>Sun Son Solar</h2>
@@ -73,8 +71,6 @@
 
     <p>No account? <a onclick="show('register')">Register</a></p>
 </div>
-
-<!-- REGISTER -->
 <div id="register" class="page" style="display:none">
     <img src="logo.png" width="100">
     <h2>Create Account</h2>
@@ -90,8 +86,6 @@
         <a onclick="show('login')">Login</a>
     </p>
 </div>
-
-<!-- HOME -->
 <div id="home" class="page" style="display:none">
     <img src="logo.png" width="100">
     <h1>Welcome to Sun Son Solar!</h1>
